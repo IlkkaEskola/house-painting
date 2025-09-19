@@ -19,4 +19,16 @@
 
 #roof{
     position: absolute;
+    width: 500px;
+    height: 100px;
+    background-color: brown;
+    border: 1px solid brown;
+    top: 0;
+}
+
+#window-1{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: white;
 }
