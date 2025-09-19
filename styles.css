@@ -1,34 +1,113 @@
+body{
+    background: skyblue;
+    margin: 0;
+    padding-top: 250px;
+}
+
 #house{
     position: relative;
     width: 500px;
     height: 400px;
     background-color: rgb(226, 116, 116);
     border: 5px solid brown;
-    top: 200px;
-    left: 600px;
+    margin: 0 auto;
 }
 
 #chimney{
     position: absolute;
-    width: 100px;
+    width: 80px;
     height: 120px;
-    border: 2px solid black;
+    border: 3px solid black;
     background-color: white;
-    top: -125px;
+    top: -120px;
+    z-index: -1;
+    right: 150px;
+}
+
+#smoke{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    top: -80px;
+    right: 150px;
 }
 
 #roof{
     position: absolute;
-    width: 500px;
+    width: 100%;
     height: 100px;
-    background-color: brown;
-    border: 1px solid brown;
+    background: repeating-linear-gradient(
+        45deg, 
+        saddlebrown 0, 
+        saddlebrown 20px, 
+        peru 20px, 
+        peru 40px);
+    border: 2px solid brown;
     top: 0;
 }
 
-#window-1{
+#window-1, #window-2{
     position: absolute;
     width: 90px;
     height: 90px;
     background-color: white;
+    border: 5px solid brown;
+    top: 140px;
+}
+
+#window-1{
+    left: 60px;
+}
+
+#window-2{
+    right: 60px;
+}
+
+#door{
+    position: absolute;
+    width: 120px;
+    height: 180px;
+    background-color: white;
+    border: 5px solid brown;
+    bottom: 0;
+    left: 190px;
+}
+
+#door::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: brown;
+    top: 90px;
+    right: 15px;
+}
+
+#welcome{
+    position: absolute;
+    bottom: -40px;
+    left: 190px;
+    width: 120px;
+    height: 30px;
+    background: rgb(19, 180, 19);
+    transform: skewX(-20deg);
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: green;
+    z-index: -2;
 }
